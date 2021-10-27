@@ -76,7 +76,7 @@
 }
 
 body > div.content {
-    width: unset;
+    width: 75%;
 }
 
 #newDriver, #newVehicle {
