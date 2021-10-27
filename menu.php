@@ -11,7 +11,7 @@
     document.getElementById("drivers").addEventListener("click", navigateMenu);
     document.getElementById("vehicle").addEventListener("click", navigateMenu);
     document.getElementById("users").addEventListener("click", navigateMenu);
-    document.getElementById("booking").addEventListener("click", navigateMenu);
+    document.getElementById("bookings").addEventListener("click", navigateMenu);
 
     function navigateMenu(event) {
         window.location.href = event.target.id;
