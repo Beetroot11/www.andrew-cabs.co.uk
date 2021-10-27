@@ -42,9 +42,9 @@
 		<? include '../footer.php' ?>
 
 		<script>
-			document.getElementById("newDriver").addEventListener("click", createNewDriver);
+			document.getElementById("submitBtn").addEventListener("click", createNewDriver);
 			function createNewDriver() {
-				//Need to navigate to other page to add driver
+				
 			}	
 		</script>
 	</body>

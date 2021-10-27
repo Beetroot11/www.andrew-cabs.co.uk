@@ -11,10 +11,12 @@
 <script>
     var path = window.location.pathname;
     var page = path.split("/").pop();
-
-    if (page != null) {
-        document.getElementById(page).classList.add("active");
+    
+    var pageElement = document.getElementById(page);
+    if (pageElement) {
+        pageElement.classList.add("active");
     }
+
     document.getElementById("home").addEventListener("click", navigateMenu);
     document.getElementById("drivers").addEventListener("click", navigateMenu);
     document.getElementById("vehicle").addEventListener("click", navigateMenu);
