@@ -85,7 +85,7 @@ div.content {
 }
 
 .loginWindow {
-    width: 380px;
+    width: 380px !important;
 }
 
 div#footer {
