@@ -9,7 +9,7 @@
 		<? include '../menu.php' ?>
 
 		<div class="content">
-            <div id="smallerWindow">
+            <div class="smallerWindow">
                 <div id="driverFirstName">
                     <div class="inputTitle">First Name</div>
                     <div class="input">
