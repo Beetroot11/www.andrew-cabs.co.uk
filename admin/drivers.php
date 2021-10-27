@@ -19,8 +19,8 @@
 				</div>
 
 				<div id="newDriver" class="card">
-					<i class="fas fa-user-plus"></i>
-					<br/>Add New Driver
+					<div id="icon"><i class="fas fa-user-plus fa-2x"></i></div>
+					<div id="desc">Add New Driver</div>
 				</div>
 			</div>
 		</div>
