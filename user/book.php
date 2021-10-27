@@ -73,15 +73,15 @@
 		<script>
 			document.getElementById("bookBtn").addEventListener("click", book);
 
-			const Toast = Swal.mixin({
+			const Toast = swal.mixin({
 				toast: true,
 				position: 'top-end',
 				showConfirmButton: false,
 				timer: 3000,
 				timerProgressBar: true,
 				didOpen: (toast) => {
-					toast.addEventListener('mouseenter', Swal.stopTimer)
-					toast.addEventListener('mouseleave', Swal.resumeTimer)
+					toast.addEventListener('mouseenter', swal.stopTimer)
+					toast.addEventListener('mouseleave', swal.resumeTimer)
 				}
 				})
 
