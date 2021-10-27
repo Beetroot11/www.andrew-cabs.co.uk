@@ -1,12 +1,12 @@
 <html>
 	<? 
-		$pageName = "Home";
+		$pageName = "Book";
 		include '../header.php';
 	?>
 	<body>
 		<? include '../logo.php'; ?>
 
-		<div class="content">
+		<div class="content booking">
 			<div id="loginWindow">
 				<div id="bookingAmountInput">
 					<div class="inputTitle">How many people is the booking for?</div>
@@ -70,7 +70,7 @@
 		<? include '../footer.php' ?>
 
 		<script>
-			document.getElementById("bookBtn").addEventListener("click", login);
+			document.getElementById("bookBtn").addEventListener("click", book);
 
 			function book() {
 				var amountOfPeople = document.getElementById("booking-amount").value;

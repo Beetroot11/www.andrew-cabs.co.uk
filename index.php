@@ -5,6 +5,7 @@
 	?>
 	<body>
 		<? include 'logo.php'; ?>
+		<? include 'logout.php'; ?>
 		<div class="content loginWindow">
 			<div id="loginWindow">
 				<div id="emailInput">
