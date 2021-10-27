@@ -52,6 +52,7 @@
 
 .cards {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -60,6 +61,7 @@
     border-radius: 15px;
     padding: 12px;
     margin-right: 12px;
+    margin-top: 12px;
     cursor: pointer;
     user-select: none;
 }
