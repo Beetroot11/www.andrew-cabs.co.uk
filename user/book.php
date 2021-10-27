@@ -73,23 +73,6 @@
 		<script>
 			document.getElementById("bookBtn").addEventListener("click", book);
 
-			const Toast = swal.mixin({
-				toast: true,
-				position: 'top-end',
-				showConfirmButton: false,
-				timer: 3000,
-				timerProgressBar: true,
-				didOpen: (toast) => {
-					toast.addEventListener('mouseenter', swal.stopTimer)
-					toast.addEventListener('mouseleave', swal.resumeTimer)
-				}
-				})
-
-				Toast.fire({
-				icon: 'success',
-				title: 'Signed in successfully'
-				})
-
 			function book() {
 				var amountOfPeople = document.getElementById("booking-amount").value;
 				var when = document.getElementById("booking-when").value;
@@ -99,6 +82,28 @@
 				alert('booked!');
 			}
 
+			function userLoggedIn() {
+				var toastMixin = Swal.mixin({
+					toast: true,
+					icon: 'success',
+					title: 'General Title',
+					animation: false,
+					position: 'top-right',
+					showConfirmButton: false,
+					timer: 3000,
+					timerProgressBar: true,
+					didOpen: (toast) => {
+					toast.addEventListener('mouseenter', Swal.stopTimer)
+					toast.addEventListener('mouseleave', Swal.resumeTimer)
+					}
+				});
+			}	
+
+			toastMixin.fire({
+				animation: true,
+				title: 'Signed in Successfully'
+			});
+		
 		</script>
 	</body>
 </html>
