@@ -6,7 +6,7 @@
     <div id="bookings">Bookings</div>
 </div>
 
-<div class="logoutBtn">
+<div id="logoutBtn">
     <i class="fas fa-sign-out-alt"></i> Logout
 </div>
 
