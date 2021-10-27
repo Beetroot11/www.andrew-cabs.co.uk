@@ -46,6 +46,17 @@
 						<span id="driverDobError" class="inputError"></span>
 					</div>
 				</div>
+                <div id="licencedToDrive">
+                    <div class="inputTitle">Driver Licenced to Drive</div>
+					<div class="input">
+                        <input type="checkbox" id="vehicleType1" name="vehicleType1" value="Car">
+                        <label for="vehicleType1"> Car</label><br>
+                        <input type="checkbox" id="vehicleType2" name="vehicleType2" value="Bus">
+                        <label for="vehicleType2"> Bus</label><br>
+						<span id="driverLicenceError" class="inputError"></span>
+					</div>
+                </div>
+
 				<div id="submitBtn" class="btn">
 					<i class="fas fa-user-plus"></i> Create Driver
 				</div>
