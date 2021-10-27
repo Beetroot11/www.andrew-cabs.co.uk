@@ -34,6 +34,18 @@
                         <span id="driverSurnameError" class="inputError"></span>
                     </div>
                 </div>
+                <div id="driverDob">
+					<div class="inputTitle">Driver Date of Birth</div>
+					<div class="input">
+						<input type="date" 
+							id="driver-dob" 
+							class="formInput"
+							placeholder="Date of Birth" 
+							aria-label="Date of Birth" 
+							value="" />
+						<span id="driverDobError" class="inputError"></span>
+					</div>
+				</div>
 				<div id="submitBtn" class="btn">
 					<i class="fas fa-user-plus"></i> Create Driver
 				</div>
