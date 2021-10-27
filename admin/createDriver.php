@@ -98,7 +98,7 @@
                 formData.append("surname", document.getElementById("driver-surname").value);
                 formData.append("dob", document.getElementById("driver-dob").value);
                 formData.append("licenceNumber", document.getElementById("driver-licence-number").value);
-                formData.append("licenceToDrive", licencedToDrive);
+                formData.append("licenceToDrive", JSON.stringify(licencedToDrive));
 
                 var requestOptions = {
                     method: 'POST',
