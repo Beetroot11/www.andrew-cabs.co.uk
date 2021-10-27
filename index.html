@@ -6,20 +6,78 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="image_src" href="favicon.ico" />
 		<link rel="SHORTCUT ICON" href="favicon.ico" />
-		<script defer src="/assets/fontawesome/js/all.js"></script>
+		<script defer src="assets/fontawesome/js/all.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<div id="banner">
-			<i class="fas fa-user"></i>
-			Andrew Cabs
+		<div id="logo">
+			<i class="fas fa-taxi"></i> Andrew Cabs
 		</div>
-		<div id="content">
-			Somethign here login window?
+		<div class="content">
+			<div id="loginWindow">
+				<div id="emailInput">
+					<div class="inputTitle">Your Email:</div>
+					<div class="input">
+						<input type="email" 
+							id="user-email" 
+							class="formInput"
+							placeholder="Email" 
+							aria-label="Email" 
+							value="" 
+							autocomplete="off" />
+						<span id="emailError" class="inputError"></span>
+					</div>
+				</div>
+				<div id="passwordInput">
+					<div class="inputTitle">Your Password:</div>
+					<div class="input">
+						<input type="password" 
+							id="user-pass" 
+							class="formInput"
+							placeholder="Password" 
+							aria-label="Password" 
+							value="" 
+							autocomplete="off" />
+						<span id="passError" class="inputError"></span>
+					</div>
+				</div>
+				
+				<div id="loginBtn" class="btn">
+					<i class="fas fa-sign-in-alt"></i> Login
+				</div>
+			</div>
 		</div>
 		<div id="footer">
 			<div id="copyright">
 				<p>&copy; Andrew Tech. All rights reserved.</p>
 			</div>
 		</div>
+
+		<script>
+			document.getElementById("loginBtn").addEventListener("click", login);
+
+			function login() {
+				var email = validateField("Email", "user-email", "emailError", "emailInput");
+				var pass = validateField("Password", "user-pass", "passError", "passwordInput");
+
+				if (email && pass) {
+					
+				}
+			}
+
+			function validateField(type, field, required, input) {
+				var fieldValue = document.getElementById(field).value;
+
+				if (fieldValue == "") {
+					document.getElementById(required).innerHTML = type + " Required";
+					document.getElementById(input).querySelector("div.input").classList.add("error");
+				} else {
+					document.getElementById(required).innerHTML = "";
+					document.getElementById(input).querySelector("div.input").classList.remove("error");
+				}
+				return fieldValue;
+			}
+
+		</script>
 	</body>
 </html>
