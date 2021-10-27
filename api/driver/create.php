@@ -23,6 +23,7 @@
     */
 
     require '../../network.php';
+    require '../../config.php';
 
     $postedAuthKey = $_POST['authKey'];
 
