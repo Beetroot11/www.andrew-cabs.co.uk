@@ -6,7 +6,7 @@
     <div id="bookings">Bookings</div>
 </div>
 
-<div class="logout">
+<div class="logoutBtn">
     <i class="fas fa-sign-out-alt"></i> Logout
 </div>
 
@@ -20,7 +20,7 @@
     document.getElementById("vehicle").addEventListener("click", navigateMenu);
     document.getElementById("users").addEventListener("click", navigateMenu);
     document.getElementById("bookings").addEventListener("click", navigateMenu);
-    document.getElementById("loginBtn").addEventListener("click", logout);
+    document.getElementById("logoutBtn").addEventListener("click", logout);
 
     function navigateMenu(event) {
         window.location.href = event.target.id;
