@@ -1,0 +1,23 @@
+body { 
+    font-family: sans-serif;
+    background-color: #0D1117;
+    color: white;
+}
+
+div#banner {
+    background-color: #161B22;
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+}
+
+div#content {
+    padding: 10px;
+}
+
+div#footer {
+    background-color: #161B22;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 15px;
+}
