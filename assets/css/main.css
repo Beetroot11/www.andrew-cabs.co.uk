@@ -84,7 +84,7 @@ div.content {
     text-align: left;
 }
 
-.smallerWindow {
+.loginWindow, .booking {
     width: 380px !important;
 }
 

@@ -8,8 +8,8 @@
 
 		<? include '../menu.php' ?>
 
-		<div class="content">
-            <div class="smallerWindow">
+		<div class="content loginWindow">
+            <div id="loginWindow">
                 <div id="driverFirstName">
                     <div class="inputTitle">First Name</div>
                     <div class="input">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
 				<div id="submitBtn" class="btn">
-					<i class="fas fa-user-plus"></i> Create Driver
+					<i class="fas ffa-user-plus"></i> Create Driver
 				</div>
 			</div>
 		</div>

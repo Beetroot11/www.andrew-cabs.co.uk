@@ -7,7 +7,7 @@
 		<? include '../logo.php'; ?>
 		<? include '../logout.php'; ?>
 		<div class="content booking">
-			<div class="smallerWindow">
+			<div id="loginWindow">
 				<div id="bookingAmountInput">
 					<div class="inputTitle">How many people is the booking for?</div>
 					<div class="input">

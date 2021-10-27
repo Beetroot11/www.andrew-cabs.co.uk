@@ -6,7 +6,7 @@
 	<body>
 		<? include 'logo.php'; ?>
 		<div class="content loginWindow">
-			<div class="smallerWindow">
+			<div id="loginWindow">
 				<div id="emailInput">
 					<div class="inputTitle">Your Email:</div>
 					<div class="input">
