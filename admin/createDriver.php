@@ -79,7 +79,9 @@
 		<? include '../footer.php' ?>
 
 		<script>
-			document.getElementById("submitBtn").addEventListener("click", submitForm);
+            document.getElementById("submitBtn").addEventListener('click', (event) => {
+                submitForm();
+            });
 
             const submitForm = () => {
                 var licencedToDrive = [];
