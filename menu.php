@@ -7,7 +7,7 @@
 </div>
 
 <script>
-    document.getElementById("home").addEventListener("click", navigateMenu));
+    document.getElementById("home").addEventListener("click", navigateMenu);
     document.getElementById("drivers").addEventListener("click", navigateMenu);
     document.getElementById("vehicle").addEventListener("click", navigateMenu);
     document.getElementById("users").addEventListener("click", navigateMenu);
