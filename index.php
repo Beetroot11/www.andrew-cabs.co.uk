@@ -1,14 +1,8 @@
 <html>
-	<head>
-		<title>Andrew Cabs</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="image_src" href="favicon.ico" />
-		<link rel="SHORTCUT ICON" href="favicon.ico" />
-		<script defer src="assets/fontawesome/js/all.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	</head>
+	<? 
+		$pageName = "Login";
+		include 'header.php';
+	?>
 	<body>
 		<div id="logo">
 			<i class="fas fa-taxi"></i> Andrew Cabs
@@ -47,12 +41,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<div id="copyright">
-				<p>&copy; Andrew Tech. All rights reserved.</p>
-			</div>
-		</div>
-
+		<? include 'footer.php'; ?>
 		<script>
 			document.getElementById("loginBtn").addEventListener("click", login);
 
@@ -60,9 +49,11 @@
 				var email = validateField("Email", "user-email", "emailError", "emailInput");
 				var pass = validateField("Password", "user-pass", "passError", "passwordInput");
 
-				if (email && pass) {
-					window.location.href = 'dashboard';
-				}
+				if (email == "admin") {
+					window.location.href = 'dashboard.html';
+				} else if (email && pass) {
+					window.location.href = 'book.html';
+				} 
 			}
 
 			function validateField(type, field, required, input) {
