@@ -6,6 +6,10 @@
     <div id="bookings">Bookings</div>
 </div>
 
+<div class="logout">
+    <i class="fas fa-sign-out-alt"></i> Logout
+</div>
+
 <script>
     var path = window.location.pathname;
     var page = path.split("/").pop();
