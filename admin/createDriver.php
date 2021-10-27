@@ -100,8 +100,6 @@
                 formData.append("licenceNumber", document.getElementById("driver-licence-number").value);
                 formData.append("licenceToDrive", licencedToDrive);
 
-                var shouldRemember = document.getElementById('remember').checked;
-
                 var requestOptions = {
                     method: 'POST',
                     body: formData,
