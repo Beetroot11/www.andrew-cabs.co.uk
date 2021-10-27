@@ -56,10 +56,13 @@
 
 .card {
     background-color: red;
+    width: 130px;
+    border-radius: 15px;
+    padding: 12px;
 }
 
 .container {
-    background-color: blue;
+    font-size: 12px;
 }
 
 body > div.content {
