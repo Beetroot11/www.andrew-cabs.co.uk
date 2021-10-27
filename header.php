@@ -8,5 +8,5 @@
     <link rel="SHORTCUT ICON" href="https://www.andrew-cabs.co.uk/favicon.ico" />
     <script defer src="https://www.andrew-cabs.co.uk/assets/fontawesome/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
 </head>
