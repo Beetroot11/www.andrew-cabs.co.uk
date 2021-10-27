@@ -29,25 +29,23 @@
 		<script>
 			document.getElementById("newDriver").addEventListener("click", createNewDriver);
 			function createNewDriver() {
-				swal({
-					title: 'New Driver',
+				const { value: formValues } = await Swal.fire({
+					title: 'Multiple inputs',
 					html:
-						'<input id="fName" class="swal2-input" placeholder="First Name">' +
-						'<input id="sName" class="swal2-input" placeholder="Surname">',
-					preConfirm: function () {
-						return new Promise(function (resolve) {
-						resolve([
-							$('#fName').val(),
-							$('#sName').val()
-						])
-						})
-					},
-					onOpen: function () {
-						$('#fName').focus()
+						'<input id="swal-input1" class="swal2-input">' +
+						'<input id="swal-input2" class="swal2-input">',
+					focusConfirm: false,
+					preConfirm: () => {
+						return [
+							document.getElementById('swal-input1').value,
+							document.getElementById('swal-input2').value
+						]
 					}
-				}).then(function (result) {
-					swal(JSON.stringify(result))
-				}).catch(swal.noop)
+				})
+
+				if (formValues) {
+					Swal.fire(JSON.stringify(formValues))
+				}
 			}	
 		</script>
 	</body>

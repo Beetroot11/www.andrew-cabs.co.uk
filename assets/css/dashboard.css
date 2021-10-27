@@ -61,7 +61,8 @@
     border-radius: 15px;
     padding: 12px;
     margin-right: 12px;
-    margin-top: 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     cursor: pointer;
     user-select: none;
 }
