@@ -7,13 +7,13 @@
 </div>
 
 <script>
-    document.getElementById("home").addEventListener("click", navigateMenu('home'));
-    document.getElementById("drivers").addEventListener("click", navigateMenu('drivers'));
-    document.getElementById("vehicle").addEventListener("click", navigateMenu('vehicle'));
-    document.getElementById("users").addEventListener("click", navigateMenu('users'));
-    document.getElementById("booking").addEventListener("click", navigateMenu('booking'));
+    document.getElementById("home").addEventListener("click", navigateMenu));
+    document.getElementById("drivers").addEventListener("click", navigateMenu);
+    document.getElementById("vehicle").addEventListener("click", navigateMenu);
+    document.getElementById("users").addEventListener("click", navigateMenu);
+    document.getElementById("booking").addEventListener("click", navigateMenu);
 
-    function navigateMenu(navigate) {
-        window.location.href = navigate;
+    function navigateMenu(event) {
+        window.location.href = event.target.id;
     }
 </script>
