@@ -50,9 +50,9 @@
                     <div class="inputTitle">Driver Licenced to Drive</div>
 					<div class="input">
                         <input type="checkbox" id="vehicleType1" name="vehicleType1" value="Car">
-                        <label for="vehicleType1"> Car</label><br>
+                        <label for="vehicleType1"> Car</label>
                         <input type="checkbox" id="vehicleType2" name="vehicleType2" value="Bus">
-                        <label for="vehicleType2"> Bus</label><br>
+                        <label for="vehicleType2"> Bus</label>
 						<span id="driverLicenceError" class="inputError"></span>
 					</div>
                 </div>
