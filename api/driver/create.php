@@ -85,11 +85,11 @@
                     $return->success = true;
                 } else {
                     $return->success = false;
-                    $return->failMessage = "Statement failed to execute";
+                    $return->failMessage = "Statement failed to execute 1";
                 }
             } else {
                 $return->success = false;
-                $return->failMessage = "Statement failed to execute";
+                $return->failMessage = "Statement failed to execute 2";
             }
         } else {
             $return->success = false;
