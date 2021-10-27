@@ -29,7 +29,7 @@
 		<script>
 			document.getElementById("newDriver").addEventListener("click", createNewDriver);
 			function createNewDriver() {
-				const { value: formValues } = await Swal.fire({
+				const { value: formValues } = Swal.fire({
 					title: 'Multiple inputs',
 					html:
 						'<input id="swal-input1" class="swal2-input">' +
