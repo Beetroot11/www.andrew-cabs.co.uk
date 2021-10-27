@@ -5,7 +5,7 @@
 	?>
 	<body>
 		<? include '../logo.php'; ?>
-
+		<? include '../logout.php'; ?>
 		<div class="content booking">
 			<div id="loginWindow">
 				<div id="bookingAmountInput">
