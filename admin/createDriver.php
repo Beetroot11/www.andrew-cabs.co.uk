@@ -61,9 +61,9 @@
                 <div id="licencedToDrive">
                     <div class="inputTitle">Driver Licenced to Drive</div>
 					<div class="input">
-                        <input type="checkbox" id="vehicleType1" name="vehicleType1" value="Car">
+                        <input type="checkbox" id="vehicleType1" name="vehicleType" value="Car">
                         <label for="vehicleType1"> Car</label>
-                        <input type="checkbox" id="vehicleType2" name="vehicleType2" value="Bus">
+                        <input type="checkbox" id="vehicleType2" name="vehicleType" value="Bus">
                         <label for="vehicleType2"> Bus</label>
 						<span id="driverLicenceError" class="inputError"></span>
 					</div>
@@ -77,10 +77,49 @@
 		<? include '../footer.php' ?>
 
 		<script>
-			document.getElementById("submitBtn").addEventListener("click", createNewDriver);
-			function createNewDriver() {
-				
-			}	
+			document.getElementById("submitBtn").addEventListener("click", submitForm);
+
+            const submitForm = () => {
+                var licencedToDrive = [];
+                if (document.getElementById("vehicleType1").checked) {
+                    licencedToDrive.push("CAR");  
+                }
+                if (document.getElementById("vehicleType2").checked) {
+                    licencedToDrive.push("BUS");  
+                }
+
+                var formData = new FormData();
+                formData.append("authKey", "<?=$authKey?>");
+                formData.append("firstName", document.getElementById("driver-first-name").value);
+                formData.append("surname", document.getElementById("driver-surname").value);
+                formData.append("dob", document.getElementById("driver-dob").value);
+                formData.append("licenceNumber", document.getElementById("driver-licence-number").value);
+                formData.append("licenceToDrive", licencedToDrive);
+
+                var shouldRemember = document.getElementById('remember').checked;
+
+                var requestOptions = {
+                    method: 'POST',
+                    body: formData,
+                    redirect: 'follow'
+                };
+
+                fetch("/api/driver/create", requestOptions)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: data.failMessage,
+                                icon: 'error',
+                                confirmButtonText: 'Try Again'
+                            });
+                        }
+                    })
+                    .catch(error => console.log('error', error));
+            }
 		</script>
 	</body>
 </html>
