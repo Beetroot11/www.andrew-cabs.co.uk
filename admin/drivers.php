@@ -30,14 +30,25 @@
 			document.getElementById("newDriver").addEventListener("click", createNewDriver);
 			function createNewDriver() {
 				swal({
-					position: "top-end",
-					type: "success",
-					title: "Your work has been saved",
-					showConfirmButton: false,
-					timer: 1500
-				});
+					title: 'New Driver',
+					html:
+						'<input id="fName" class="swal2-input" placeholder="First Name">' +
+						'<input id="sName" class="swal2-input" placeholder="Surname">',
+					preConfirm: function () {
+						return new Promise(function (resolve) {
+						resolve([
+							$('#fName').val(),
+							$('#sName').val()
+						])
+						})
+					},
+					onOpen: function () {
+						$('#fName').focus()
+					}
+				}).then(function (result) {
+					swal(JSON.stringify(result))
+				}).catch(swal.noop)
 			}	
-
 		</script>
 	</body>
 </html>
