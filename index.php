@@ -50,9 +50,9 @@
 				var pass = validateField("Password", "user-pass", "passError", "passwordInput");
 
 				if (email == "admin") {
-					window.location.href = 'dashboard.html';
+					window.location.href = 'dashboard';
 				} else if (email && pass) {
-					window.location.href = 'book.html';
+					window.location.href = 'book';
 				} 
 			}
 

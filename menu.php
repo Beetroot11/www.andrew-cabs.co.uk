@@ -14,13 +14,6 @@
     document.getElementById("booking").addEventListener("click", navigateMenu('booking'));
 
     function navigateMenu(navigate) {
-        var email = validateField("Email", "user-email", "emailError", "emailInput");
-        var pass = validateField("Password", "user-pass", "passError", "passwordInput");
-
-        if (email == "admin") {
-            window.location.href = 'dashboard.html';
-        } else if (email && pass) {
-            window.location.href = 'book.html';
-        } 
+        window.location.href = navigate;
     }
 </script>
