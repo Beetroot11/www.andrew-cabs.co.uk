@@ -86,10 +86,12 @@
                 } else {
                     $return->success = false;
                     $return->failMessage = "Statement failed to execute 1";
+                    $return->sql = $insertDriver;
                 }
             } else {
                 $return->success = false;
                 $return->failMessage = "Statement failed to execute 2";
+                $return->sql = $insertLicence;
             }
         } else {
             $return->success = false;
