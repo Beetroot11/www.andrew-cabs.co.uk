@@ -12,7 +12,9 @@
     var path = window.location.pathname;
     var page = path.split("/").pop();
 
-    document.getElementById(page).classList.add("active");
+    if (page) {
+        document.getElementById(page).classList.add("active");
+    }
     document.getElementById("home").addEventListener("click", navigateMenu);
     document.getElementById("drivers").addEventListener("click", navigateMenu);
     document.getElementById("vehicle").addEventListener("click", navigateMenu);
