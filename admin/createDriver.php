@@ -110,7 +110,7 @@
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {
-                            location.reload();
+                            window.location.href = '/admin/drivers';
                         } else {
                             Swal.fire({
                                 title: 'Error!',
