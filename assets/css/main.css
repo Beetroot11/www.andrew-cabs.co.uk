@@ -22,6 +22,7 @@ div#logo {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-color: #FFF04D;
     border-style: double;
+    user-select: none;
 }
 
 div#loginWindow {
@@ -36,6 +37,7 @@ div#loginWindow {
     text-align: left;
     padding-bottom: 5px;
     font-size: 10px;
+    user-select: none;
 }
 
 .inputError {
@@ -100,4 +102,5 @@ div#footer {
     border-radius: 10px;
     padding: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    user-select: none;
 }
