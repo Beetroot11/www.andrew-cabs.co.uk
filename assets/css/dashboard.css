@@ -49,3 +49,19 @@
     background-color: whitesmoke;
     cursor: pointer;
 }
+
+.cards {
+    background-color: white;
+}
+
+.card {
+    background-color: red;
+}
+
+.container {
+    background-color: blue;
+}
+
+body > div.content {
+    width: unset;
+}
