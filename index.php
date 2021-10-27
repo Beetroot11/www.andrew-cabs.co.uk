@@ -50,10 +50,10 @@
 				var pass = validateField("Password", "user-pass", "passError", "passwordInput");
 
 				if (email == "admin") {
-					window.location.href = 'home';
+					window.location.href = 'admin/home';
 				} else if (email && pass) {
-					window.location.href = 'book';
-				} 
+					window.location.href = 'user/book';
+				}
 			}
 
 			function validateField(type, field, required, input) {
