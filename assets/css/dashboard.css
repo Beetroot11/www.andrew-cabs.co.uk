@@ -51,7 +51,7 @@
 }
 
 .cards {
-    background-color: white;
+    display: flex;
 }
 
 .card {
@@ -59,6 +59,7 @@
     width: 130px;
     border-radius: 15px;
     padding: 12px;
+    margin-right: 12px;
 }
 
 .container {
