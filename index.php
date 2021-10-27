@@ -37,11 +37,16 @@
 				<div id="loginBtn" class="btn">
 					<i class="fas fa-sign-in-alt"></i> Login
 				</div>
+
+				<div id="createBtn" class="btn">
+					<i class="fas fa-user-plus"></i> Create Account
+				</div>
 			</div>
 		</div>
 		<? include 'footer.php'; ?>
 		<script>
 			document.getElementById("loginBtn").addEventListener("click", login);
+			document.getElementById("createBtn").addEventListener("click", create);
 
 			function login() {
 				var email = validateField("Email", "user-email", "emailError", "emailInput");
@@ -52,6 +57,10 @@
 				} else if (email && pass) {
 					window.location.href = 'user/book';
 				}
+			}
+
+			function create() {
+				
 			}
 
 			function validateField(type, field, required, input) {
