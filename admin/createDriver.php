@@ -35,7 +35,7 @@
                     </div>
                 </div>
 				<div id="submitBtn" class="btn">
-					<i class="fas ffa-user-plus"></i> Create Driver
+					<i class="fas fa-user-plus"></i> Create Driver
 				</div>
 			</div>
 		</div>
