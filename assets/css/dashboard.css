@@ -78,16 +78,11 @@ body > div.content {
     width: unset;
 }
 
-#newDriver {
+#newDriver, #newVehicle {
     text-align: center;
 }
 
-#newDriver #icon {
-    
-
-}
-
-#newDriver #desc {
+#newDriver #desc, #newVehicle #desc {
     font-size: 15px;
     margin-top: 20px;
 }
