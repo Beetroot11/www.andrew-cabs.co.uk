@@ -46,6 +46,18 @@
 						<span id="driverDobError" class="inputError"></span>
 					</div>
 				</div>
+                <div id="driverLicenceNumber">
+                    <div class="inputTitle">Licence Number</div>
+                    <div class="input">
+                        <input type="text" 
+                            id="driver-licence-number" 
+                            class="formInput"
+                            placeholder="Licence Number" 
+                            aria-label="Licence Number" 
+                            value="" />
+                        <span id="driverLicenceNumberError" class="inputError"></span>
+                    </div>
+                </div>
                 <div id="licencedToDrive">
                     <div class="inputTitle">Driver Licenced to Drive</div>
 					<div class="input">
