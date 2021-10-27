@@ -34,14 +34,13 @@
     text-decoration: none;
     user-select: none;
     line-height: 12px;
-    margin-top: 1px;
-    margin-right: 2px;
     top: 0;
     right: 0;
     background-color: white;
     overflow: hidden;
     border-radius: 10px;
     width: fit-content;
-    margin: auto;
     margin-bottom: 15px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
