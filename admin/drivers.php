@@ -4,10 +4,8 @@
 		include '../header.php';
 	?>
 	<body>
-		<div id="logo">
-			<i class="fas fa-taxi"></i> Andrew Cabs
-		</div>
-        
+		<? include '../logo.php'; ?>
+
 		<? include '../menu.php' ?>
 
 		<div class="content">

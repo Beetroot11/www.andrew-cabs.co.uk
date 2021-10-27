@@ -81,7 +81,7 @@ div.content {
     width: 380px;
     margin: auto;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    box-shadow:  rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     text-align: left;
 }
 
@@ -98,7 +98,7 @@ div#footer {
     width: fit-content;
     margin: auto;
     border-radius: 10px;
-    padding: 2px;
+    
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     user-select: none;
 }
