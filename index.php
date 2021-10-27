@@ -52,7 +52,7 @@
 				var email = validateField("Email", "user-email", "emailError", "emailInput");
 				var pass = validateField("Password", "user-pass", "passError", "passwordInput");
 
-				if (email == "admin" && pass != null) {
+				if (email == "admin" && pass) {
 					window.location.href = 'admin/home';
 				} else if (email && pass) {
 					window.location.href = 'user/book';
