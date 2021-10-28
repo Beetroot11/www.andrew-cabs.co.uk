@@ -39,6 +39,7 @@
 				.then(data => {
 					if (data.success) {
 						data.users.forEach(user => insertUser(user.userId, user.fName, user.sName));
+						$('#users').DataTable();
 					} else {
 						Swal.fire({
 							title: 'Error!',
@@ -53,10 +54,6 @@
 			function insertUser(userId, fName, sName){
 				$(".cards").append("<tr><td>" + fName + " " + sName + "</td></tr>");
 			}
-
-			$(document).ready( function () {
-				$('#users').DataTable();
-			});
 		</script>
 	</body>
 </html>
