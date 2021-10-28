@@ -32,7 +32,7 @@
 						result = "";
 						var card = 0;
 						$(this).find(".card").each(function(){
-							result += $(this).text() + "[" + ++card + "] <br/>";
+							result += $(this).text() +  "[" + $(this).attr('id') + "]" + "[" + ++card + "] <br/>";
 						});
 						$(".list").html(result);
 					});
@@ -71,7 +71,7 @@
 			}
 
 			function insertDriver(driverId, fName, sName, addedOn){
-				$(".cards").prepend("<div class=\"card\"><div class=\"container\">" +
+				$(".cards").prepend("<div id=\"driver" + driverId + "\" class=\"card\"><div class=\"container\">" +
 									"<img src=\"../assets/images/driverPlaceholder.png\" class=\"driverPicture\"/><h4><b>" + fName + " " + sName + 
 									"</b></h4><p>Driver Since " + addedOn + "</p></div></div>");
 			}
