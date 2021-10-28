@@ -38,6 +38,15 @@
 			$(document).ready( function () {
 			});
 
+			var formData = new FormData();
+			formData.append("authKey", "<?=$authKey?>");
+
+			var requestOptions = {
+				method: 'POST',
+				body: formData,
+				redirect: 'follow'
+			};
+
 			fetch("/api/user/getAll", requestOptions)
 				.then(response => response.json())
 				.then(data => {
