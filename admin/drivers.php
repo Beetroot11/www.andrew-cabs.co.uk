@@ -43,7 +43,7 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.success) {
-						alert(data);
+						alert(data.drivers);
 					} else {
 						Swal.fire({
 							title: 'Error!',
