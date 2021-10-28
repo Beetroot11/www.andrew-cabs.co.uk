@@ -101,7 +101,7 @@
             });
 
             document.getElementById("cancelBtn").addEventListener('click', (event) => {
-                navigateMenu("vehicles");
+                navigateToPage("vehicles");
             });
 
             const submitForm = () => {

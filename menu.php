@@ -26,4 +26,8 @@
     function navigateMenu(event) {
         window.location.href = event.target.id;
     }
+
+    function navigateToPage(page) {
+        window.location.href = page;
+    }
 </script>
