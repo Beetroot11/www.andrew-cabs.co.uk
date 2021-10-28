@@ -26,10 +26,10 @@
 			$(".cards").sortable({
 				connectWith: ".cards",
 				stop: function(event, ui) {
+					var sortOrder = new Array();     
+
 					$('.cards').each(function() {
 						var card = 0;
-						var sortOrder = new Array();     
-
 						$(this).find(".card").each(function(){
 							sortOrder.push({"driverId": $(this).attr('id').replace('driver',''), "sort": ++card});
 						});
