@@ -55,7 +55,8 @@
 
 
 			function insertDriver(driverId, fName, sName, addedOn){
-				$(".cards").prepend("<div class=\"card\"><div class=\"container\"><h4><b>" + fName + " " + sName + 
+				$(".cards").prepend("<div class=\"card\"><div class=\"container\">" +
+									"<img src=\"../assets/images/driverPlaceholder.png\" class=\"driverPicture\"/><h4><b>" + fName + " " + sName + 
 									"</b></h4><p>Driver Since " + addedOn + "</p></div></div>");
 			}
 		</script>
