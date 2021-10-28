@@ -106,12 +106,9 @@
 
             const submitForm = () => {
                 var licencedToDrive = [];
-                if (document.getElementById("vehicleType1").checked) {
-                    licencedToDrive.push("CAR");  
-                }
-                if (document.getElementById("vehicleType2").checked) {
-                    licencedToDrive.push("BUS");  
-                }
+
+                var select = document.getElementById('vehicle-type');
+                var vehicleType = select.options[select.selectedIndex].value;
 
                 var formData = new FormData();
                 formData.append("authKey", "<?=$authKey?>");
@@ -120,7 +117,7 @@
                 formData.append("colour", document.getElementById("vehicle-colour").value);
                 formData.append("capacity", document.getElementById("vehicle-capacity").value);
                 formData.append("registration", document.getElementById("vehicle-registration").value);
-                formData.append("type", document.getElementById("vehicle-type").value);
+                formData.append("type", vehicleType);
 
                 var requestOptions = {
                     method: 'POST',
