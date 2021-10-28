@@ -44,7 +44,7 @@
 						redirect: 'follow'
 					};
 
-					console.log(formData);
+					console.log(JSON.stringify(sortOrder));
 
 					fetch("/api/driver/updateSortOrder", requestOptions)
 						.then(response => response.json())
