@@ -87,3 +87,7 @@ body > div.content {
     font-size: 15px;
     margin-top: 20px;
 }
+
+.driverPicture {
+    width: -webkit-fill-available;
+}
