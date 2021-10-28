@@ -43,7 +43,7 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.success) {
-						alert(data.drivers);
+						data.drivers.forEach(driver => insertDriver(driver.driverId, driver.fName, driver.sName, driver.addedOn));
 					} else {
 						Swal.fire({
 							title: 'Error!',
@@ -60,6 +60,11 @@
 			function createNewDriver() {
 				window.location.href = 'createDriver';
 			}	
+
+
+			function insertDriver(driverId, fName, sName, addedOn){
+				$(".cards").prepend( "<p>Test</p>" );
+			}
 		</script>
 	</body>
 </html>
