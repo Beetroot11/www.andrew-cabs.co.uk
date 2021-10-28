@@ -14,19 +14,16 @@
 			<div id="loginWindow">
 				<div class="cards">
 					<div id="drivers" class="card">
-						<div id="icon"><i class="fas fa-car fa-2x"></i></div>
 						<div id="desc"></div>
 					</div>
 				</div>
 				<div class="cards">
 					<div id="users" class="card">
-						<div id="icon"><i class="fas fa-car fa-2x"></i></div>
 						<div id="desc"></div>
 					</div>
 				</div>
 				<div class="cards">
 					<div id="vehicles" class="card">
-						<div id="icon"><i class="fas fa-car fa-2x"></i></div>
 						<div id="desc"></div>
 					</div>
 				</div>
