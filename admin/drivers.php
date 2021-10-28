@@ -12,13 +12,7 @@
 
 		<div class="content">
 			<div class="cards">
-				<div class="card">
-					Img
-					<div class="container">
-						<h4><b>John Doe</b></h4> 
-						<p>Architect & Engineer</p> 
-					</div>
-				</div>
+				
 
 				<div id="newDriver" class="card">
 					<div id="icon"><i class="fas fa-user-plus fa-2x"></i></div>
@@ -63,7 +57,8 @@
 
 
 			function insertDriver(driverId, fName, sName, addedOn){
-				$(".cards").prepend( "<p>Test</p>" );
+				$(".cards").prepend("<div class=\"card\"><div class=\"container\"><h4><b>" + fName + " " + sName + 
+									"</b></h4><p>Driver Since " + addedOn + "</p></div></div>");
 			}
 		</script>
 	</body>
