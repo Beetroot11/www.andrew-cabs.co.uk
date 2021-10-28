@@ -17,10 +17,27 @@
 					<div id="desc">Add New Driver</div>
 				</div>
 			</div>
+
+			<div class="list"></div>
 		</div>
+		
 		<? include '../footer.php' ?>
 
 		<script>
+
+			$(".cards").sortable({
+				connectWith: ".cards",
+				stop: function(event, ui) {
+					$('.cards').each(function() {
+						result = "";
+						alert($(this).sortable("toArray"));
+						$(this).find("div").each(function(){
+							result += $(this).text() + ",";
+						});
+						$(".list").html(result);
+					});
+				}
+			});
 
 			var formData = new FormData();
 			formData.append("authKey", "<?=$authKey?>");
