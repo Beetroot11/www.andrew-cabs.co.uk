@@ -32,7 +32,7 @@
 						result = "";
 						var card = 0;
 						$(this).find(".card").each(function(){
-							result += $(this).text() + "[" + card++ + "] <br/>";
+							result += $(this).text() + "[" + ++card + "] <br/>";
 						});
 						$(".list").html(result);
 					});
