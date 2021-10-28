@@ -39,8 +39,8 @@
             foreach($sortOrderArray as $driverSort) {
                 var_dump($driverSort);
 
-                $driverId = $driverSort->driverId;
-                $sort = $driverSort->sort;
+                $driverId = $driverSort["driverId"];
+                $sort = $driverSort["sort"];
 
                 $updateSort = "UPDATE `DRIVER` SET `sort`='$sort' WHERE `driverId` = '$driverId'";
                 $mysqli->query($updateSort);
