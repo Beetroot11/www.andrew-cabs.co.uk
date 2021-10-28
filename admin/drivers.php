@@ -2,6 +2,8 @@
 	<? 
 		$pageName = "Drivers";
 		include '../header.php';
+
+		include '../config.php';
 	?>
 	<body>
 		<? include '../logo.php'; ?>
@@ -28,30 +30,30 @@
 
 		<script>
 
-				var formData = new FormData();
-                formData.append("authKey", "<?=$authKey?>");
+			var formData = new FormData();
+			formData.append("authKey", "<?=$authKey?>");
 
-                var requestOptions = {
-                    method: 'POST',
-                    body: formData,
-                    redirect: 'follow'
-                };
+			var requestOptions = {
+				method: 'POST',
+				body: formData,
+				redirect: 'follow'
+			};
 
-                fetch("/api/driver/getAll", requestOptions)
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert(data);
-                        } else {
-                            Swal.fire({
-                                title: 'Error!',
-                                text: data.failMessage,
-                                icon: 'error',
-                                confirmButtonText: 'Try Again'
-                            });
-                        }
-                    })
-                    .catch(error => console.log('error', error));
+			fetch("/api/driver/getAll", requestOptions)
+				.then(response => response.json())
+				.then(data => {
+					if (data.success) {
+						alert(data);
+					} else {
+						Swal.fire({
+							title: 'Error!',
+							text: data.failMessage,
+							icon: 'error',
+							confirmButtonText: 'Try Again'
+						});
+					}
+				})
+				.catch(error => console.log('error', error));
 
 			document.getElementById("newDriver").addEventListener("click", createNewDriver);
 			
