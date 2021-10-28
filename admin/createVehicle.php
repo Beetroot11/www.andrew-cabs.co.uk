@@ -85,7 +85,7 @@
 				</div>
 
 				<div id="submitBtn" class="btn">
-					<i class="fas fa-user-plus"></i> Create Vehicle
+                    <i class="fas fa-car"></i> Create Vehicle
 				</div>
 
                 <div id="cancelBtn" class="btn">
