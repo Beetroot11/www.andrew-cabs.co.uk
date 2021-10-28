@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div id="vehicleCapacity">
-					<div class="inputTitle">Capacity</div>
+					<div class="inputTitle">Capacity (Including the driver)</div>
 					<div class="input">
 						<input type="number" 
 							id="vehicle-capacity" 
