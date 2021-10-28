@@ -25,9 +25,6 @@
 		<? include '../footer.php' ?>
 
 		<script>
-			$(document).ready( function () {
-			});
-
 			var formData = new FormData();
 			formData.append("authKey", "<?=$authKey?>");
 
