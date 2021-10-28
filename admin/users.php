@@ -12,13 +12,20 @@
 
 		<div class="content">
 			<div id="loginWindow">
-				<table id="users" class="display">
+				<table id="table_id" class="display">
 					<thead>
 						<tr>
-							<th>Name</th>
+							<th>Column 1</th>
 						</tr>
 					</thead>
-					<tbody></tbody>
+					<tbody>
+						<tr>
+							<td>Row 1 Data 1</td>
+						</tr>
+						<tr>
+							<td>Row 2 Data 1</td>
+						</tr>
+					</tbody>
 				</table>
 			</div>
 		</div>
@@ -42,7 +49,7 @@
 				.then(data => {
 					if (data.success) {
 						data.users.forEach(user => insertUser(user.userId, user.fName, user.sName));
-						$('#users').DataTable();
+						$('#table_id').DataTable();
 					} else {
 						Swal.fire({
 							title: 'Error!',
