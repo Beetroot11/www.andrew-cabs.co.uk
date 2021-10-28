@@ -36,8 +36,28 @@
 
 		<script>
 			$(document).ready( function () {
-				$('#table_id').DataTable();
 			});
+
+			fetch("/api/user/getAll", requestOptions)
+				.then(response => response.json())
+				.then(data => {
+					if (data.success) {
+						data.users.forEach(user => insertUser(user.userId, user.fName, user.sName));
+						$('#table_id').DataTable();
+					} else {
+						Swal.fire({
+							title: 'Error!',
+							text: data.failMessage,
+							icon: 'error',
+							confirmButtonText: 'Try Again'
+						});
+					}
+				})
+				.catch(error => console.log('error', error));
+			
+			function insertUser(userId, fName, sName){
+				$("tbody").append("<tr><td>" + fName + " " + sName + "</td></tr>");
+			}
 		</script>
 	</body>
 </html>
