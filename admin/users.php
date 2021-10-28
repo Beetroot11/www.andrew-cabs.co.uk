@@ -12,13 +12,14 @@
 
 		<div class="content">
 			<div id="loginWindow">
-				<table id="users" class="display">
+				<table id="table_id" class="display">
 					<thead>
 						<tr>
-							<th>Name</th>
+							<th>Column 1</th>
+							<th>Column 2</th>
 						</tr>
 					</thead>
-					<tbody id=>
+					<tbody>
 						<tr>
 							<td>Row 1 Data 1</td>
 							<td>Row 1 Data 2</td>
@@ -35,7 +36,7 @@
 
 		<script>
 			$(document).ready( function () {
-				$('#users').DataTable();
+				$('#table_id').DataTable();
 			});
 		</script>
 	</body>
