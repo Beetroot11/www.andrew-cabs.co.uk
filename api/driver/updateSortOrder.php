@@ -37,8 +37,6 @@
             $sortOrderArray = json_decode($sortOrder, true);
 
             foreach($sortOrderArray as $driverSort) {
-                var_dump($driverSort);
-
                 $driverId = $driverSort["driverId"];
                 $sort = $driverSort["sort"];
 
