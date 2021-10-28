@@ -1,6 +1,6 @@
 <html>
 	<? 
-		$pageName = "Vehicle";
+		$pageName = "Vehicles";
 		include '../header.php';
 
 		include '../config.php';
@@ -14,7 +14,7 @@
 			<div class="cards">
 				<div id="newVehicle" class="card">
 					<div id="icon"><i class="fas fa-car fa-2x"></i></div>
-					<div id="desc">Add New Car</div>
+					<div id="desc">Add New Vehicle</div>
 				</div>
 			</div>
 		</div>
@@ -34,7 +34,7 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.success) {
-						data.vehicles.forEach(vehicle => insertVehicle(vehicle.vehicleId, vehicle.make, vehicle.model, vehicle.colour));
+						data.vehicles.forEach(vehicle => insertVehicle(vehicle.vehicleId, vehicle.make, vehicle.model, vehicle.colour, vehicle.registration));
 					} else {
 						Swal.fire({
 							title: 'Error!',
@@ -52,9 +52,10 @@
 				window.location.href = 'createVehicle';
 			}	
 
-			function insertVehicle(vehicleId, make, model, colour){
+			function insertVehicle(vehicleId, make, model, colour, registration){
 				$(".cards").prepend("<div class=\"card\"><div class=\"container\">" + 
-				"<div id=\"icon\"><i class=\"fas fa-car fa-2x\" style=\"color:" + colour + "\"></i></div><h4><b>" + make + " " + model + "</b></h4></div></div>");
+				"<div id=\"icon\"><i class=\"fas fa-car fa-2x\" style=\"color:" + colour + "\"></i></div><h4><b>" + make + " " + model + 
+				"</b></h4><p>" + registration + "</p></div></div>");
 			}
 		</script>
 	</body>

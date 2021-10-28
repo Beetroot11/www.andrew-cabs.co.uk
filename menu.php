@@ -1,7 +1,7 @@
 <div class="topnav">
     <div id="home">Home</div>
     <div id="drivers">Drivers</div>
-    <div id="vehicle">Vehicle</div>
+    <div id="vehicles">Vehicles</div>
     <div id="users">Users</div>
     <div id="bookings">Bookings</div>
 </div>
@@ -19,7 +19,7 @@
 
     document.getElementById("home").addEventListener("click", navigateMenu);
     document.getElementById("drivers").addEventListener("click", navigateMenu);
-    document.getElementById("vehicle").addEventListener("click", navigateMenu);
+    document.getElementById("vehicles").addEventListener("click", navigateMenu);
     document.getElementById("users").addEventListener("click", navigateMenu);
     document.getElementById("bookings").addEventListener("click", navigateMenu);
 
