@@ -87,6 +87,10 @@
 				<div id="submitBtn" class="btn">
 					<i class="fas fa-user-plus"></i> Create Vehicle
 				</div>
+
+                <div id="cancelBtn" class="btn">
+                    <i class="fas fa-times"></i> Cancel
+				</div>
 			</div>
 		</div>
 		<? include '../footer.php' ?>
@@ -94,6 +98,10 @@
 		<script>
             document.getElementById("submitBtn").addEventListener('click', (event) => {
                 submitForm();
+            });
+
+            document.getElementById("cancelBtn").addEventListener('click', (event) => {
+                navigateMenu("vehicles");
             });
 
             const submitForm = () => {
