@@ -18,8 +18,8 @@
 							<th>Name</th>
 						</tr>
 					</thead>
-					<tbody id="userDetails">
-						<tr><td></td></tr>
+					<tbody>
+						<tr><td>hello</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -36,25 +36,25 @@
 				redirect: 'follow'
 			};
 
-			fetch("/api/user/getAll", requestOptions)
-				.then(response => response.json())
-				.then(data => {
-					if (data.success) {
-						data.users.forEach(user => insertUser(user.userId, user.fName, user.sName));
-					} else {
-						Swal.fire({
-							title: 'Error!',
-							text: data.failMessage,
-							icon: 'error',
-							confirmButtonText: 'Try Again'
-						});
-					}
-				})
-				.catch(error => console.log('error', error));
+			// fetch("/api/user/getAll", requestOptions)
+			// 	.then(response => response.json())
+			// 	.then(data => {
+			// 		if (data.success) {
+			// 			data.users.forEach(user => insertUser(user.userId, user.fName, user.sName));
+			// 		} else {
+			// 			Swal.fire({
+			// 				title: 'Error!',
+			// 				text: data.failMessage,
+			// 				icon: 'error',
+			// 				confirmButtonText: 'Try Again'
+			// 			});
+			// 		}
+			// 	})
+			// 	.catch(error => console.log('error', error));
 			
-			function insertUser(userId, fName, sName){
-				$("#userDetails").append("<tr><td>" + fName + " " + sName + "</td></tr>");
-			}
+			// function insertUser(userId, fName, sName){
+			// 	$("#userDetails").append("<tr><td>" + fName + " " + sName + "</td></tr>");
+			// }
 
 			$(document).ready( function () {
 				$('#users').DataTable();
