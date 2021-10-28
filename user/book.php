@@ -74,12 +74,15 @@
 			document.getElementById("bookBtn").addEventListener("click", book);
 
 			function book() {
-				var amountOfPeople = document.getElementById("booking-amount").value;
-				var when = document.getElementById("booking-when").value;
-				var where = document.getElementById("booking-where").value;
-				var to = document.getElementById("booking-to").value;
 
-				alert('booked!');
+				var formData = new FormData();
+				formData.append("authKey", "<?=$authKey?>");
+				formData.append("amountOfPeople", document.getElementById("booking-amount").value);
+				formData.append("when", document.getElementById("booking-when").value);
+				formData.append("whereFrom", document.getElementById("booking-where-from").value);
+				formData.append("whereTo", document.getElementById("booking-where-to").value);
+
+				alert('booked!' + formData);
 			}
 
 			var toastMixin = Swal.mixin({
