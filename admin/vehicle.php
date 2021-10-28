@@ -34,7 +34,7 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.success) {
-						data.vehicles.forEach(driver => insertVehicle(vehicles.vehicleId, vehicle.make, vehicle.model));
+						data.vehicles.forEach(vehicle => insertVehicle(vehicle.vehicleId, vehicle.make, vehicle.model));
 					} else {
 						Swal.fire({
 							title: 'Error!',
