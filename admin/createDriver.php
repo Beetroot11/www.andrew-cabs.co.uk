@@ -88,7 +88,7 @@
             });
 
             document.getElementById("cancelBtn").addEventListener('click', (event) => {
-                navigateToPage("vehicles");
+                navigateToPage("drivers");
             });
 
             const submitForm = () => {
