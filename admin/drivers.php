@@ -51,12 +51,7 @@
 			
 			function createNewDriver() {
 				window.location.href = 'createDriver';
-			}	
-
-			$(".card").draggable({
-				snap: ".card",
-				snapMode: "inner"
-			});
+			}
 
 			function insertDriver(driverId, fName, sName, addedOn){
 				$(".cards").prepend("<div class=\"card\"><div class=\"container\">" +
