@@ -27,7 +27,7 @@
 
     if ($checkData) {       
         if ($postedAuthKey == $authKey) {
-            $getVehicles = "SELECT `vehicleId`, `make`, `model` FROM `VEHICLE`;";
+            $getVehicles = "SELECT `vehicleId`, `make`, `model`, `colour` FROM `VEHICLE`";
 
             $results = $mysqli->query($getVehicles);
             if ($results) {
@@ -38,6 +38,7 @@
                     $vehicle->vehicleId = $row['vehicleId'];
                     $vehicle->make = $row['make'];
                     $vehicle->model = $row['model'];
+                    $vehicle->colour = $row['colour'];
                     array_push($vehicles, $vehicle);
                 }
                 $return->vehicles = $vehicles;               

@@ -34,7 +34,7 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.success) {
-						data.vehicles.forEach(vehicle => insertVehicle(vehicle.vehicleId, vehicle.make, vehicle.model));
+						data.vehicles.forEach(vehicle => insertVehicle(vehicle.vehicleId, vehicle.make, vehicle.model, vehicle.colour));
 					} else {
 						Swal.fire({
 							title: 'Error!',
@@ -52,8 +52,9 @@
 				window.location.href = 'createVehicle';
 			}	
 
-			function insertVehicle(vehicleId, make, model){
-				$(".cards").prepend("<div class=\"card\"><div class=\"container\"><h4><b>" + make + " " + model + "</b></h4></div></div>");
+			function insertVehicle(vehicleId, make, model, colour){
+				$(".cards").prepend("<div class=\"card\"><div class=\"container\">" + 
+				"<div id=\"icon\"><i class=\"fas fa-car fa-2x\" style=\"color:" + colour +\"></i></div><h4><b>" + make + " " + model + "</b></h4></div></div>");
 			}
 		</script>
 	</body>
