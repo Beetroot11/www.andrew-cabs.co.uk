@@ -18,7 +18,9 @@
 							<th>Name</th>
 						</tr>
 					</thead>
-					<tbody id="userDetails"></tbody>
+					<tbody id="userDetails">
+						<tr><td></td></tr>
+					</tbody>
 				</table>
 			</div>
 		</div>
