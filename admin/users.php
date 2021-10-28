@@ -12,31 +12,50 @@
 
 		<div class="content">
 			<div id="loginWindow">
-				<table id="table_id" class="display">
+				<table id="users" class="display">
 					<thead>
 						<tr>
-							<th>Column 1</th>
-							<th>Column 2</th>
+							<th>Name</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td>Row 1 Data 1</td>
-							<td>Row 1 Data 2</td>
-						</tr>
-						<tr>
-							<td>Row 2 Data 1</td>
-							<td>Row 2 Data 2</td>
-						</tr>
-					</tbody>
+					<tbody id="userDetails"></tbody>
 				</table>
 			</div>
 		</div>
 		<? include '../footer.php' ?>
 
 		<script>
+			var formData = new FormData();
+			formData.append("authKey", "<?=$authKey?>");
+
+			var requestOptions = {
+				method: 'POST',
+				body: formData,
+				redirect: 'follow'
+			};
+
+			fetch("/api/user/getAll", requestOptions)
+				.then(response => response.json())
+				.then(data => {
+					if (data.success) {
+						data.users.forEach(user => insertUser(user.userId, user.fName, user.sName));
+					} else {
+						Swal.fire({
+							title: 'Error!',
+							text: data.failMessage,
+							icon: 'error',
+							confirmButtonText: 'Try Again'
+						});
+					}
+				})
+				.catch(error => console.log('error', error));
+			
+			function insertUser(userId, fName, sName){
+				$(".cards").append("<tr><td>" + fName + " " + sName + "</td></tr>");
+			}
+
 			$(document).ready( function () {
-				$('#table_id').DataTable();
+				$('#users').DataTable();
 			});
 		</script>
 	</body>
