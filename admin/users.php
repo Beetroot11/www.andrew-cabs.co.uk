@@ -52,7 +52,7 @@
 				.catch(error => console.log('error', error));
 			
 			function insertUser(userId, fName, sName){
-				$(".cards").append("<tr><td>" + fName + " " + sName + "</td></tr>");
+				$("#userDetails").append("<tr><td>" + fName + " " + sName + "</td></tr>");
 			}
 		</script>
 	</body>
