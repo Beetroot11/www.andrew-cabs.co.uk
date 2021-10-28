@@ -54,7 +54,7 @@
 
 			function insertVehicle(vehicleId, make, model, colour){
 				$(".cards").prepend("<div class=\"card\"><div class=\"container\">" + 
-				"<div id=\"icon\"><i class=\"fas fa-car fa-2x\" style=\"color:" + colour +\"></i></div><h4><b>" + make + " " + model + "</b></h4></div></div>");
+				"<div id=\"icon\"><i class=\"fas fa-car fa-2x\" style=\"color:" + colour + "\"></i></div><h4><b>" + make + " " + model + "</b></h4></div></div>");
 			}
 		</script>
 	</body>
