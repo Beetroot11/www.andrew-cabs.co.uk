@@ -27,7 +27,7 @@
 
     if ($checkData) {       
         if ($postedAuthKey == $authKey) {
-            $getDrivers = "SELECT `driverId`, `fName`, `sName`, `addedOn`, `sort` FROM `DRIVER` ORDER BY `DRIVER`.`sort` ASC;";
+            $getDrivers = "SELECT `driverId`, `fName`, `sName`, `addedOn`, `sort` FROM `DRIVER` ORDER BY `DRIVER`.`sort` DESC;";
 
             $results = $mysqli->query($getDrivers);
             if ($results) {
