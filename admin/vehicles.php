@@ -34,7 +34,9 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.success) {
-						data.vehicles.forEach(vehicle => insertVehicle(vehicle.vehicleId, vehicle.make, vehicle.model, vehicle.colour, vehicle.registration));
+						data.vehicles.forEach(vehicle => insertVehicle(vehicle.vehicleId, 
+							vehicle.make, vehicle.model, vehicle.colour, vehicle.registration, 
+							vehicle.vehicleTypeId));
 					} else {
 						Swal.fire({
 							title: 'Error!',
@@ -52,9 +54,13 @@
 				window.location.href = 'createVehicle';
 			}	
 
-			function insertVehicle(vehicleId, make, model, colour, registration){
+			function insertVehicle(vehicleId, make, model, colour, registration, vehicleTypeId){
+				var vehcileIcon = "fas fa-car-side";
+				if (vehicleTypeId == "1") {
+					vehcileIcon = "fas fa-truck-moving";
+				}
 				$(".cards").prepend("<div class=\"card\"><div class=\"container\">" + 
-				"<div id=\"icon\"><i class=\"fas fa-car fa-2x\" style=\"color:" + colour + "\"></i></div><h4><b>" + make + " " + model + 
+				"<div id=\"icon\"><i class=\"" + vehcileIcon + " fa-2x\" style=\"color:" + colour + "\"></i></div><h4><b>" + make + " " + model + 
 				"</b></h4><p>" + registration + "</p></div></div>");
 			}
 		</script>
