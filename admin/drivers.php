@@ -28,10 +28,12 @@
 			$(".cards").sortable({
 				connectWith: ".cards",
 				stop: function(event, ui) {
+					var card = 0;
 					$('.cards').each(function() {
 						result = "";
+						card++;
 						$(this).find("div").each(function(){
-							result += $(this).text() + ",";
+							result += $(this).text() + "[" + card + "] <br/>";
 						});
 						$(".list").html(result);
 					});
