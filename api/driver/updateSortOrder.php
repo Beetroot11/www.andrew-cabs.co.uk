@@ -41,10 +41,7 @@
                 $sort = $driverSort['sort'];
 
                 $updateSort = "UPDATE `DRIVER` SET `sort`='$sort' WHERE `driverId` = '$driverId'";
-
-                if ($mysqli->query($updateSort) === TRUE) {
-                    $return->success = true;
-                }
+                $mysqli->query($updateSort);
             }
         } else {
             $return->success = false;
