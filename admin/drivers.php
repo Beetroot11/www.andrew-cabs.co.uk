@@ -31,7 +31,7 @@
 					$('.cards').each(function() {
 						result = "";
 						var card = 0;
-						$(this).find("div").each(function(){
+						$(this).find(".card").each(function(){
 							result += $(this).text() + "[" + card++ + "] <br/>";
 						});
 						$(".list").html(result);
