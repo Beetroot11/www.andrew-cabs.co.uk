@@ -2,6 +2,8 @@
 	<? 
 		$pageName = "Users";
 		include '../header.php';
+
+		include '../config.php';
 	?>
 	<body>
 		<? include '../logo.php'; ?>
