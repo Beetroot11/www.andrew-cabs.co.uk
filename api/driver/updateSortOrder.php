@@ -35,8 +35,10 @@
     if ($checkData) {       
         if ($postedAuthKey == $authKey) {
             $sortOrderArray = json_decode($sortOrder);
-
+            echo $sortOrderArray;
             foreach($sortOrderArray as $driverSort) {
+                echo 'driverSort:'.$driverSort;
+
                 $driverId = $driverSort['driverId'];
                 $sort = $driverSort['sort'];
 
