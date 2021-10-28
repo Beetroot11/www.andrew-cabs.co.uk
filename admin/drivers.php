@@ -30,7 +30,6 @@
 				stop: function(event, ui) {
 					$('.cards').each(function() {
 						result = "";
-						alert($(this).sortable("toArray"));
 						$(this).find("div").each(function(){
 							result += $(this).text() + ",";
 						});
