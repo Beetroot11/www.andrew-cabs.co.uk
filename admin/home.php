@@ -48,9 +48,9 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.success) {
-						$('#drivers #desc').text(data.drivers " drivers");
-						$('#users #desc').text(data.users " users");
-						$('#vehicles #desc').text(data.vehicles " vehicles");
+						$('#drivers #desc').text(data.drivers + " drivers");
+						$('#users #desc').text(data.users + " users");
+						$('#vehicles #desc').text(data.vehicles + " vehicles");
 					} else {
 						Swal.fire({
 							title: 'Error!',
