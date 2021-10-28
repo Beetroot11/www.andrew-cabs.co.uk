@@ -22,7 +22,6 @@
 		<? include '../footer.php' ?>
 
 		<script>
-
 			$(".cards").sortable({
 				connectWith: ".cards",
 				stop: function(event, ui) {
@@ -34,7 +33,50 @@
 							sortOrder.push({"driverId": $(this).attr('id').replace('driver',''), "sort": ++card});
 						});
 					});
-					alert(sortOrder);
+					
+					var formData = new FormData();
+					formData.append("authKey", "<?=$authKey?>");
+					formData.append("sortOrder", JSON.stringify(sortOrder));
+
+					var requestOptions = {
+						method: 'POST',
+						body: formData,
+						redirect: 'follow'
+					};
+
+					fetch("/api/driver/updateSortOrder", requestOptions)
+						.then(response => response.json())
+						.then(data => {
+							if (data.success) {
+								var toastMixin = Swal.mixin({
+									toast: true,
+									icon: 'success',
+									title: 'Sort Order Updated',
+									animation: false,
+									position: 'top-right',
+									showConfirmButton: false,
+									timer: 3000,
+									timerProgressBar: true,
+									didOpen: (toast) => {
+										toast.addEventListener('mouseenter', Swal.stopTimer)
+										toast.addEventListener('mouseleave', Swal.resumeTimer)
+									}
+								});
+							
+								toastMixin.fire({
+									animation: true,
+									title: 'Sort Order Updated'
+								});
+							} else {
+								Swal.fire({
+									title: 'Error!',
+									text: data.failMessage,
+									icon: 'error',
+									confirmButtonText: 'Try Again'
+								});
+							}
+						})
+						.catch(error => console.log('error', error));
 				}
 			});
 
