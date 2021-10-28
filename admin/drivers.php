@@ -44,10 +44,11 @@
 						redirect: 'follow'
 					};
 
+					console.log(formData);
+
 					fetch("/api/driver/updateSortOrder", requestOptions)
 						.then(response => response.json())
 						.then(data => {
-							console.log('data', data)
 							if (data.success) {
 								var toastMixin = Swal.mixin({
 									toast: true,
