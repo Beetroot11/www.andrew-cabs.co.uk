@@ -50,7 +50,7 @@
             $vehicles = $resultsVehicles->num_rows;
 
             if ($resultsVehicles) {
-                $return->users = $users;               
+                $return->vehicles = $vehicles;               
             }
             
             $return->success = ($resultsDrivers && $resultsUsers && $resultsVehicles);
