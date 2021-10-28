@@ -17,8 +17,6 @@
 					<div id="desc">Add New Driver</div>
 				</div>
 			</div>
-
-			<div class="list"></div>
 		</div>
 		
 		<? include '../footer.php' ?>
@@ -29,13 +27,14 @@
 				connectWith: ".cards",
 				stop: function(event, ui) {
 					$('.cards').each(function() {
-						result = "";
 						var card = 0;
+						var sortOrder = new Array();     
+
 						$(this).find(".card").each(function(){
-							result += $(this).text() +  "[" + $(this).attr('id') + "]" + "[" + ++card + "] <br/>";
+							sortOrder.push({"driverId": $(this).attr('id').replace('driver',''), "sort": ++card});
 						});
-						$(".list").html(result);
 					});
+					alert(sortOrder);
 				}
 			});
 
