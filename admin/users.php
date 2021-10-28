@@ -15,11 +15,10 @@
 				<table id="table_id" class="display">
 					<thead>
 						<tr>
-							<th>Column 1</th>
+							<th>Name</th>
 						</tr>
 					</thead>
-					<tbody>
-					</tbody>
+					<tbody></tbody>
 				</table>
 			</div>
 		</div>
