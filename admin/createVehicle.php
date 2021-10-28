@@ -105,10 +105,8 @@
             });
 
             const submitForm = () => {
-                var licencedToDrive = [];
-
                 var select = document.getElementById('vehicle-type');
-                var vehicleType = select.options[select.selectedIndex].value;
+                var vehicleTypeId = select.options[select.selectedIndex].value;
 
                 var formData = new FormData();
                 formData.append("authKey", "<?=$authKey?>");
@@ -117,7 +115,7 @@
                 formData.append("colour", document.getElementById("vehicle-colour").value);
                 formData.append("capacity", document.getElementById("vehicle-capacity").value);
                 formData.append("registration", document.getElementById("vehicle-registration").value);
-                formData.append("type", vehicleType);
+                formData.append("vehicleTypeId", vehicleTypeId);
 
                 var requestOptions = {
                     method: 'POST',
