@@ -36,7 +36,7 @@
         if ($postedAuthKey == $authKey) {
             $sortOrderArray = json_decode($sortOrder);
 
-            foreach($sortOrder as $driverSort) {
+            foreach($sortOrderArray as $driverSort) {
                 var_dump($driverSort);
 
                 $driverId = $driverSort->driverId;
