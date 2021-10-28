@@ -11,7 +11,7 @@
 		<? include '../menu.php' ?>
 
 		<div class="content">
-			<div class="cards">
+			<div class="addItem">
 				<div id="newDriver" class="card">
 					<div id="icon"><i class="fas fa-user-plus fa-2x"></i></div>
 					<div id="desc">Add New Driver</div>
